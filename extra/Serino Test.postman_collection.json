@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "42552a80-9ff9-469b-8724-fe3b0a186b6c",
+		"name": "Serino Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "598986"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Patrick\",\r\n    \"age\": 25,\r\n    \"password\": \"@SerinoTestPassword\",\r\n    \"email\": \"patrick@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3011/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:3011/api/user/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Patrick\",\r\n    \"age\": 25,\r\n    \"password\": \"@SerinoTestPassword\",\r\n    \"email\": \"patrick@email.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3011/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3011",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Nov 2022 10:53:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"patrick@email.com\",\r\n    \"password\": \"@SerinoTestPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3011/api/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:3011/api/user/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"patrick@email.com\",\r\n    \"password\": \"@SerinoTestPassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3011/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3011",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1332"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"534-vlyXEPPCUYsLkyYlUkrI0aB9LsE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Nov 2022 10:53:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhVmFsdWVzIjp7ImlkIjo1LCJuYW1lIjoiUGF0cmljayIsImVtYWlsIjoicGF0cmlja0BlbWFpbC5jb20iLCJhZ2UiOjI1LCJwYXNzd29yZCI6IjcwM2Y1OGJiOTdkOTY0ZTg2MjdlMmU2NDBhOGJhNDRiIiwiaGFzaCI6IjdlZTZiMjg3ZThjMDhkYzNlYmUxZTcxYWIyNzU2Nzk1YWVlODg0NGQ2OWRiYWZkMmZmYjQwNzRlZDQyZjZlNjA3YTVjMjgzM2U2ZTRjYmY1ZTY4YjVlZmQxYTU2NmVkNDY3YWJjYzZiODUzNmQ3NGQzYmRlODZkMzgyNDg2M2UyIiwiY3JlYXRlZF9hdCI6IjIwMjItMTEtMTNUMTA6NTM6MTIuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIyLTExLTEzVDEwOjUzOjEyLjAwMFoifSwiX3ByZXZpb3VzRGF0YVZhbHVlcyI6eyJpZCI6NSwibmFtZSI6IlBhdHJpY2siLCJlbWFpbCI6InBhdHJpY2tAZW1haWwuY29tIiwiYWdlIjoyNSwicGFzc3dvcmQiOiI3MDNmNThiYjk3ZDk2NGU4NjI3ZTJlNjQwYThiYTQ0YiIsImhhc2giOiI3ZWU2YjI4N2U4YzA4ZGMzZWJlMWU3MWFiMjc1Njc5NWFlZTg4NDRkNjlkYmFmZDJmZmI0MDc0ZWQ0MmY2ZTYwN2E1YzI4MzNlNmU0Y2JmNWU2OGI1ZWZkMWE1NjZlZDQ2N2FiY2M2Yjg1MzZkNzRkM2JkZTg2ZDM4MjQ4NjNlMiIsImNyZWF0ZWRfYXQiOiIyMDIyLTExLTEzVDEwOjUzOjEyLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyMi0xMS0xM1QxMDo1MzoxMi4wMDBaIn0sInVuaXFubyI6MSwiX2NoYW5nZWQiOnt9LCJfb3B0aW9ucyI6eyJpc05ld1JlY29yZCI6ZmFsc2UsIl9zY2hlbWEiOm51bGwsIl9zY2hlbWFEZWxpbWl0ZXIiOiIiLCJyYXciOnRydWUsImF0dHJpYnV0ZXMiOlsiaWQiLCJuYW1lIiwiZW1haWwiLCJhZ2UiLCJwYXNzd29yZCIsImhhc2giLCJjcmVhdGVkX2F0IiwidXBkYXRlZF9hdCJdfSwiaXNOZXdSZWNvcmQiOmZhbHNlLCJpYXQiOjE2NjgzMzY4MjZ9.9B_-Q2njOY8WJNkVYcoYRwHaRlhZV_HAZJC66AVkKDc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Find Treasures",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhVmFsdWVzIjp7ImlkIjo2LCJuYW1lIjoiUGF0cmljayIsImVtYWlsIjoicGF0cmlja0BlbWFpbC5jb20iLCJhZ2UiOjI1LCJwYXNzd29yZCI6IjA2ODc0OTFiZTgxOTAwZjg0ZmUzZWNiZDllM2QzYTY0IiwiaGFzaCI6ImMzZDU4MmM3YmViNjI2MmI3ZWU3MzhhNmRlMzYyZGE2ODRiNTk3ZWMxYjRiYTdkMjI2OGE0MTIzMWE5YjY5ZTc3Y2QxNTkxMDhkZGQyZjdkNzgzNzJhNjk3MTIyODQzZTdiY2M4ODQ5Yzc5NzZkNzA3NWU5YTM4ODdkMGMxZDQwIiwiY3JlYXRlZF9hdCI6IjIwMjItMTEtMTNUMTE6MjY6NTEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIyLTExLTEzVDExOjI2OjUxLjAwMFoifSwiX3ByZXZpb3VzRGF0YVZhbHVlcyI6eyJpZCI6NiwibmFtZSI6IlBhdHJpY2siLCJlbWFpbCI6InBhdHJpY2tAZW1haWwuY29tIiwiYWdlIjoyNSwicGFzc3dvcmQiOiIwNjg3NDkxYmU4MTkwMGY4NGZlM2VjYmQ5ZTNkM2E2NCIsImhhc2giOiJjM2Q1ODJjN2JlYjYyNjJiN2VlNzM4YTZkZTM2MmRhNjg0YjU5N2VjMWI0YmE3ZDIyNjhhNDEyMzFhOWI2OWU3N2NkMTU5MTA4ZGRkMmY3ZDc4MzcyYTY5NzEyMjg0M2U3YmNjODg0OWM3OTc2ZDcwNzVlOWEzODg3ZDBjMWQ0MCIsImNyZWF0ZWRfYXQiOiIyMDIyLTExLTEzVDExOjI2OjUxLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyMi0xMS0xM1QxMToyNjo1MS4wMDBaIn0sInVuaXFubyI6MSwiX2NoYW5nZWQiOnt9LCJfb3B0aW9ucyI6eyJpc05ld1JlY29yZCI6ZmFsc2UsIl9zY2hlbWEiOm51bGwsIl9zY2hlbWFEZWxpbWl0ZXIiOiIiLCJyYXciOnRydWUsImF0dHJpYnV0ZXMiOlsiaWQiLCJuYW1lIiwiZW1haWwiLCJhZ2UiLCJwYXNzd29yZCIsImhhc2giLCJjcmVhdGVkX2F0IiwidXBkYXRlZF9hdCJdfSwiaXNOZXdSZWNvcmQiOmZhbHNlLCJpYXQiOjE2NjgzMzg4Mjd9.Sj6Hv3iHzPiN725_dNrljQJbzDrAgQn3SZST6M_1eHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3011/api/treasure/geolocation?Latitude=14.552036595352455&Longitude=121.01696118771324&Distance=10 km&Prize value=30",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"api",
+						"treasure",
+						"geolocation"
+					],
+					"query": [
+						{
+							"key": "Latitude",
+							"value": "14.552036595352455"
+						},
+						{
+							"key": "Longitude",
+							"value": "121.01696118771324"
+						},
+						{
+							"key": "Distance",
+							"value": "10 km"
+						},
+						{
+							"key": "Prize value",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find Treasures",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3011/api/treasure/geolocation?Latitude=14.552036595352455&Longitude=121.01696118771324&Distance=1 km",
+							"host": [
+								"localhost"
+							],
+							"port": "3011",
+							"path": [
+								"api",
+								"treasure",
+								"geolocation"
+							],
+							"query": [
+								{
+									"key": "Latitude",
+									"value": "14.552036595352455"
+								},
+								{
+									"key": "Longitude",
+									"value": "121.01696118771324"
+								},
+								{
+									"key": "Distance",
+									"value": "1 km"
+								},
+								{
+									"key": "Prize value",
+									"value": "30",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "341"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"155-iQgPRRa3Z+uldkiX7+STKlokSBU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Nov 2022 10:57:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Congratulations Patrick! You have found 2 Treasures near the given coordinates!!!\",\n    \"treasuresLocation\": [\n        {\n            \"Name\": \"T1\",\n            \"Latitude\": \"14.5437648051331\",\n            \"Longitude\": \"121.019911678311\",\n            \"Distance\": 0.973011291757021\n        },\n        {\n            \"Name\": \"T3\",\n            \"Latitude\": \"14.5446435656183\",\n            \"Longitude\": \"121.020365629871\",\n            \"Distance\": 0.8999886175605513\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add New Treasures",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhVmFsdWVzIjp7ImlkIjoxLCJuYW1lIjoiUGF0IiwiZW1haWwiOiJwYXRAbWFpbC5jb20iLCJhZ2UiOjI1LCJwYXNzd29yZCI6ImQ3ZjQyYjA2ZjY4MmRiMDUxZTBlMWZjZDEyYjYwZmQwIiwiaGFzaCI6IjcwMGQyYjkyMDRkNTkwYzE1YjkzZDI0MmRmMzc4ODhkOGE5NzFkNTBmMDI1NDlkM2RhMzVhZmI0ZGYwNzM1OGNkYTIxN2VhNzU3MThlOWE3NGNiZWZjMzMzOTRlYzUzMjMxYTE2NGEyMGQ0ZDZiMmZkYmY2ZjcyNmE1NGQ1ZjJlIiwiY3JlYXRlZF9hdCI6IjIwMjItMTEtMTNUMTQ6MzU6MjQuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIyLTExLTEzVDE0OjM1OjI0LjAwMFoifSwiX3ByZXZpb3VzRGF0YVZhbHVlcyI6eyJpZCI6MSwibmFtZSI6IlBhdCIsImVtYWlsIjoicGF0QG1haWwuY29tIiwiYWdlIjoyNSwicGFzc3dvcmQiOiJkN2Y0MmIwNmY2ODJkYjA1MWUwZTFmY2QxMmI2MGZkMCIsImhhc2giOiI3MDBkMmI5MjA0ZDU5MGMxNWI5M2QyNDJkZjM3ODg4ZDhhOTcxZDUwZjAyNTQ5ZDNkYTM1YWZiNGRmMDczNThjZGEyMTdlYTc1NzE4ZTlhNzRjYmVmYzMzMzk0ZWM1MzIzMWExNjRhMjBkNGQ2YjJmZGJmNmY3MjZhNTRkNWYyZSIsImNyZWF0ZWRfYXQiOiIyMDIyLTExLTEzVDE0OjM1OjI0LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyMi0xMS0xM1QxNDozNToyNC4wMDBaIn0sInVuaXFubyI6MSwiX2NoYW5nZWQiOnt9LCJfb3B0aW9ucyI6eyJpc05ld1JlY29yZCI6ZmFsc2UsIl9zY2hlbWEiOm51bGwsIl9zY2hlbWFEZWxpbWl0ZXIiOiIiLCJyYXciOnRydWUsImF0dHJpYnV0ZXMiOlsiaWQiLCJuYW1lIiwiZW1haWwiLCJhZ2UiLCJwYXNzd29yZCIsImhhc2giLCJjcmVhdGVkX2F0IiwidXBkYXRlZF9hdCJdfSwiaXNOZXdSZWNvcmQiOmZhbHNlLCJpYXQiOjE2NjgzMjQ2NDN9.7UWYla6JwWk0Vh2Hw4r8-EjvYcB5vGE3XtTGCI9mVxs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Latitude\": \"14.6437648051331\",\r\n    \"Longitude\": \"121.319911678311\",\r\n    \"Name\": \"T20\",\r\n    \"Prize value\": \"15$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3011/api/treasure/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"api",
+						"treasure",
+						"add"
+					],
+					"query": [
+						{
+							"key": "Latitude",
+							"value": "14.552036595352455",
+							"disabled": true
+						},
+						{
+							"key": "Longitude",
+							"value": "121.01696118771324",
+							"disabled": true
+						},
+						{
+							"key": "Distance",
+							"value": "10 km",
+							"disabled": true
+						},
+						{
+							"key": "Prize value",
+							"value": "30",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Treasures",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Latitude\": \"14.6437648051331\",\r\n    \"Longitude\": \"121.319911678311\",\r\n    \"Name\": \"T19\",\r\n    \"Prize value\": \"15$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3011/api/treasure/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3011",
+							"path": [
+								"api",
+								"treasure",
+								"add"
+							],
+							"query": [
+								{
+									"key": "Latitude",
+									"value": "14.552036595352455",
+									"disabled": true
+								},
+								{
+									"key": "Longitude",
+									"value": "121.01696118771324",
+									"disabled": true
+								},
+								{
+									"key": "Distance",
+									"value": "10 km",
+									"disabled": true
+								},
+								{
+									"key": "Prize value",
+									"value": "30",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Nov 2022 11:01:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}
